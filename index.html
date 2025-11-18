@@ -7,171 +7,172 @@
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
-        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
     }
 
     .slider-container {
-        width: 90%;
-        max-width: 400px;
-        height: 85%;
-        background: linear-gradient(145deg, #0f3460 0%, #16213e 100%);
-        border-radius: 30px;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-        overflow: hidden;
-        position: relative;
-        border: 3px solid #e94560;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      width: 90%;
+      max-width: 400px;
+      height: 85%;
+      background: linear-gradient(145deg, #0f3460 0%, #16213e 100%);
+      border-radius: 30px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+      border: 3px solid #e94560;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .slide {
-        width: 100%;
-        height: 100%;
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 40px 30px;
-        box-sizing: border-box;
-        position: absolute;
-        top: 0;
-        left: 0;
-        animation: slideIn 0.5s ease-out;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 30px;
+      box-sizing: border-box;
+      animation: slideIn 0.5s ease-out;
     }
 
     .slide.active {
-        display: flex;
+      display: flex;
     }
 
     @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateX(-30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     .image-container {
-        width: 280px;
-        height: 280px;
-        background: linear-gradient(135deg, #e94560 0%, #ff6b9d 100%);
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 30px;
-        box-shadow: 0 15px 40px rgba(233, 69, 96, 0.4);
-        overflow: hidden;
-        padding: 10px;
+      width: 280px;
+      height: 280px;
+      background: linear-gradient(135deg, #e94560 0%, #ff6b9d 100%);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      box-shadow: 0 15px 40px rgba(233, 69, 96, 0.4);
+      overflow: hidden;
+      padding: 10px;
     }
 
     .image-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 15px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
     }
 
     .slide-title {
-        font-size: 28px;
-        font-weight: bold;
-        color: #ffffff;
-        text-align: center;
-        margin-bottom: 15px;
-        text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-        line-height: 1.5;
+      font-size: 28px;
+      font-weight: bold;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 15px;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+      line-height: 1.5;
     }
 
     .slide-subtitle {
-        font-size: 18px;
-        color: #a8dadc;
-        text-align: center;
-        margin-bottom: 40px;
+      font-size: 18px;
+      color: #a8dadc;
+      text-align: center;
+      margin-bottom: 40px;
     }
 
     .controls {
-        display: flex;
-        gap: 15px;
-        margin-top: auto;
-        margin-bottom: 30px;
+      display: flex;
+      gap: 15px;
+      position: absolute;
+      bottom: 70px;
     }
 
     .control-btn {
-        background: linear-gradient(135deg, #e94560 0%, #d63447 100%);
-        border: none;
-        color: white;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        font-size: 24px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 8px 20px rgba(233, 69, 96, 0.4);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      background: linear-gradient(135deg, #e94560 0%, #d63447 100%);
+      border: none;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      font-size: 24px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(233, 69, 96, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .control-btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 12px 30px rgba(233, 69, 96, 0.6);
-        background: linear-gradient(135deg, #ff6b9d 0%, #e94560 100%);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(233, 69, 96, 0.6);
+      background: linear-gradient(135deg, #ff6b9d 0%, #e94560 100%);
     }
 
     .progress-dots {
-        display: flex;
-        gap: 10px;
-        position: absolute;
-        bottom: 15px;
-        left: 50%;
-        transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.3);
-        transition: all 0.3s ease;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
     }
 
     .dot.active {
-        background: #e94560;
-        width: 30px;
-        border-radius: 5px;
+      background: #e94560;
+      width: 30px;
+      border-radius: 5px;
     }
 
     .slide-counter {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background: rgba(233, 69, 96, 0.9);
-        color: white;
-        padding: 8px 16px;
-        border-radius: 20px;
-        font-size: 16px;
-        font-weight: bold;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(233, 69, 96, 0.9);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 16px;
+      font-weight: bold;
     }
   </style>
 </head>
 
 <body>
-  <main class="slider-container">
+  <div class="slider-container">
     <div class="slide-counter" id="counter">1 / 9</div>
 
-    <!-- Slides -->
+    <!-- اسلایدها -->
     <div class="slide active" data-slide="0">
       <div class="image-container">
         <img src="https://8pic.ir/wp-content/uploads/upf-docs/WhatsApp-Image-2025-11-18-at-14.10.191.jpeg" alt="کاور ریموت خودرو وارداتی">
@@ -190,21 +191,68 @@
 
     <div class="slide" data-slide="2">
       <div class="image-container">
-        <img src="https://8pic.ir/wp-content/uploads/upf-docs/WhatsApp-Image-2025-11-18-at-14.09.32.jpeg" alt="کاور ریموت چانگان cs55">
+        <img src="https://8pic.ir/wp-content/uploads/upf-docs/WhatsApp-Image-2025-11-18-at-14.09.32.jpeg" alt="کاور ریموت چانگان CS55">
       </div>
-      <h1 class="slide-title">کاور ریموت چانگان cs55</h1>
+      <h1 class="slide-title">کاور ریموت چانگان CS55</h1>
       <p class="slide-subtitle">مخصوص چانگان CS55</p>
     </div>
 
-    <!-- ... سایر اسلایدها مثل بالا ... -->
+    <div class="slide" data-slide="3">
+      <div class="image-container">
+        <img src="https://8pic.ir/wp-content/uploads/upf-docs/WhatsApp-Image-2025-11-18-at-14.10.19.jpeg" alt="کاور ریموت تیگو 7 و آریزو">
+      </div>
+      <h1 class="slide-title">کاور ریموت تیگو 7 و آریزو</h1>
+      <p class="slide-subtitle">سازگار با تیگو 7 و آریزو</p>
+    </div>
 
+    <div class="slide" data-slide="4">
+      <div class="image-container">
+        <img src="https://8pic.ir/wp-content/uploads/upf-docs/WhatsApp-Image-2025-11-18-at-14.10.19.jpeg" alt="کاور ریموت تیگو 7 و MVM">
+      </div>
+      <h1 class="slide-title">کاور ریموت تیگو 7 و MVM</h1>
+      <p class="slide-subtitle">مخصوص تیگو 7 و MVM</p>
+    </div>
+
+    <div class="slide" data-slide="5">
+      <div class="image-container">
+        <img src="https://8pic.ir/wp-content/uploads/upf-docs/WhatsApp-Image-2025-11-18-at-14.09.311.jpeg" alt="کاور ریموت KMC J7">
+      </div>
+      <h1 class="slide-title">کاور ریموت KMC J7</h1>
+      <p class="slide-subtitle">ویژه KMC J7</p>
+    </div>
+
+    <div class="slide" data-slide="6">
+      <div class="image-container">
+        <img src="https://8pic.ir/wp-content/uploads/upf-docs/WhatsApp-Image-2025-11-18-at-14.09.31.jpeg" alt="کاور ریموت KMC K7">
+      </div>
+      <h1 class="slide-title">کاور ریموت KMC K7</h1>
+      <p class="slide-subtitle">ویژه KMC K7</p>
+    </div>
+
+    <div class="slide" data-slide="7">
+      <div class="image-container">
+        <img src="https://8pic.ir/wp-content/uploads/upf-docs/WhatsApp-Image-2025-11-18-at-14.09.31.jpeg" alt="کاور ریموت T9">
+      </div>
+      <h1 class="slide-title">کاور ریموت T9</h1>
+      <p class="slide-subtitle">کاور حرفه‌ای برای T9</p>
+    </div>
+
+    <div class="slide" data-slide="8">
+      <div class="image-container">
+        <img src="https://8pic.ir/wp-content/uploads/upf-docs/WhatsApp-Image-2025-11-18-at-14.10.191.jpeg" alt="کاور ریموت TIGGO8/FOWNIX FX">
+      </div>
+      <h1 class="slide-title">کاور ریموت TIGGO8/FOWNIX FX</h1>
+      <p class="slide-subtitle">مناسب تیگو 8 و فونیکس</p>
+    </div>
+
+    <!-- کنترل‌ها -->
     <div class="controls">
       <button class="control-btn" id="prevBtn">❮</button>
       <button class="control-btn" id="nextBtn">❯</button>
     </div>
 
     <div class="progress-dots" id="dots"></div>
-  </main>
+  </div>
 
   <script>
     const slides = document.querySelectorAll('.slide');
@@ -216,10 +264,15 @@
     let currentSlide = 0;
     const totalSlides = slides.length;
 
+    // ایجاد دایره‌ها
     for (let i = 0; i < totalSlides; i++) {
       const dot = document.createElement('div');
       dot.className = 'dot';
       if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        currentSlide = i;
+        updateSlide();
+      });
       dotsContainer.appendChild(dot);
     }
 
@@ -227,9 +280,11 @@
       slides.forEach((slide, i) => {
         slide.classList.toggle('active', i === currentSlide);
       });
+
       document.querySelectorAll('.dot').forEach((dot, i) => {
         dot.classList.toggle('active', i === currentSlide);
       });
+
       counter.textContent = `${currentSlide + 1} / ${totalSlides}`;
     }
 
