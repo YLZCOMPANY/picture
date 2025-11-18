@@ -1,40 +1,81 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>زوم روی تصویر با کلیک</title>
-
-  <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      margin-top: 50px;
-    }
-
-    img {
-      width: 400px;
-      height: auto;
-      transition: transform 0.3s ease; /* انیمیشن نرم برای زوم */
-      cursor: zoom-in;
-    }
-
-    img.zoomed {
-      transform: scale(2); /* مقدار زوم (۲ برابر) */
-      cursor: zoom-out;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اسلایدر عکس</title>
+<style>
+  body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .slider {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .slides img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+  .prev { left: 10px; }
+  .next { right: 10px; }
+</style>
 </head>
-
 <body>
-  <h2>روی تصویر کلیک کن تا زوم شود 🔍</h2>
-  <img id="zoomImage" src="sample.jpg" alt="تصویر نمونه">
 
-  <script>
-    const img = document.getElementById("zoomImage");
-    img.addEventListener("click", () => {
-      img.classList.toggle("zoomed");
-    });
-  </script>
+<div class="slider">
+  <div class="slides">
+    <img src="image1.jpg" alt="WhatsApp Image 2025-11-12 at 14">
+    <img src="image2.jpg" alt="عکس ۲">
+    <img src="image3.jpg" alt="عکس ۳">
+  </div>
+  <button class="arrow prev">&#10094;</button>
+  <button class="arrow next">&#10095;</button>
+</div>
+
+<script>
+  const slides = document.querySelector('.slides');
+  const images = document.querySelectorAll('.slides img');
+  const prev = document.querySelector('.prev');
+  const next = document.querySelector('.next');
+  let index = 0;
+
+  function showSlide() {
+    slides.style.transform = `translateX(${-index * 300}px)`;
+  }
+
+  next.addEventListener('click', () => {
+    index = (index + 1) % images.length;
+    showSlide();
+  });
+
+  prev.addEventListener('click', () => {
+    index = (index - 1 + images.length) % images.length;
+    showSlide();
+  });
+</script>
+
 </body>
 </html>
