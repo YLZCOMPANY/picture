@@ -9,7 +9,7 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Vazirmatn', sans-serif;
+      font-family: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
       background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
       display: flex;
       align-items: center;
@@ -20,14 +20,14 @@
 
     .slider-container {
       width: 90%;
-      max-width: 400px;
+      max-width: 380px;
       height: 90vh;
       background: linear-gradient(145deg, #2a2a2a 0%, #1a1a1a 100%);
       border-radius: 25px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
       position: relative;
       overflow: hidden;
-      border: 2px solid #ffd700;
+      border: 3px solid #ffd700;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -44,7 +44,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 8vh 5vw;
+      padding: 5vh 5vw;
       box-sizing: border-box;
       animation: slideIn 0.5s ease-out;
     }
@@ -54,21 +54,28 @@
     }
 
     @keyframes slideIn {
-      from { opacity: 0; transform: translateX(-30px); }
-      to { opacity: 1; transform: translateX(0); }
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     .image-container {
       width: 80%;
-      max-width: 300px;
-      aspect-ratio: 1/1;
+      max-width: 280px;
+      height: auto;
+      aspect-ratio: 1 / 1;
       background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
       border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 25px;
-      box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+      box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
       overflow: hidden;
       padding: 8px;
     }
@@ -85,7 +92,7 @@
       font-weight: bold;
       color: #ffd700;
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
       line-height: 1.5;
     }
@@ -99,15 +106,15 @@
 
     .controls {
       display: flex;
-      gap: 20px;
+      gap: 15px;
       position: absolute;
-      bottom: 70px;
+      bottom: 60px;
     }
 
     .control-btn {
       background: linear-gradient(135deg, #ffd700 0%, #d4af37 100%);
       border: none;
-      color: #000;
+      color: #000000;
       width: 50px;
       height: 50px;
       border-radius: 50%;
@@ -130,7 +137,7 @@
       display: flex;
       gap: 8px;
       position: absolute;
-      bottom: 25px;
+      bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -154,14 +161,14 @@
       top: 15px;
       right: 15px;
       background: rgba(255, 215, 0, 0.9);
-      color: #000;
+      color: #000000;
       padding: 6px 12px;
       border-radius: 20px;
       font-size: 14px;
       font-weight: bold;
     }
 
-    /* 📱 حالت مخصوص موبایل */
+    /* حالت مخصوص موبایل */
     @media (max-width: 600px) {
       .slider-container {
         width: 95%;
@@ -181,10 +188,6 @@
       .slide-subtitle {
         font-size: 4.5vw;
       }
-
-      .progress-dots {
-        bottom: 15px;
-      }
     }
   </style>
 </head>
@@ -202,9 +205,70 @@
       <p class="slide-subtitle">کیفیت برتر و طراحی منحصر به فرد</p>
     </div>
 
-    <!-- سایر اسلایدها همانند قبل -->
-    <!-- ... -->
-    
+    <div class="slide" data-slide="1">
+      <div class="image-container">
+        <img src="https://8pic.ir/wp-content/uploads/upf-docs/WhatsApp-Image-2025-11-18-at-14.09.30.jpeg" alt="YLZCOMPANY.IR">
+      </div>
+      <h1 class="slide-title">کاور ریموت فیدلیتی</h1>
+      <p class="slide-subtitle">محافظت کامل و ظاهری شیک</p>
+    </div>
+
+    <div class="slide" data-slide="2">
+      <div class="image-container">
+        <img src="https://8pic.ir/wp-content/uploads/upf-docs/WhatsApp-Image-2025-11-18-at-14.09.32.jpeg" alt="YLZCOMPANY.IR">
+      </div>
+      <h1 class="slide-title">YLZCOMPANY.IR</h1>
+      <p class="slide-subtitle">مخصوص چانگان CS55</p>
+    </div>
+
+    <div class="slide" data-slide="3">
+      <div class="image-container">
+        <img src="https://8pic.ir/wp-content/uploads/upf-docs/WhatsApp-Image-2025-11-18-at-14.10.19.jpeg" alt="YLZCOMPANY.IR">
+      </div>
+      <h1 class="slide-title">YLZCOMPANY.IR</h1>
+      <p class="slide-subtitle">سازگار با تیگو 7 و آریزو</p>
+    </div>
+
+    <div class="slide" data-slide="4">
+      <div class="image-container">
+        <img src="https://8pic.ir/wp-content/uploads/upf-docs/WhatsApp-Image-2025-11-18-at-14.10.19.jpeg" alt="YLZCOMPANY.IR">
+      </div>
+      <h1 class="slide-title">YLZCOMPANY.IR</h1>
+      <p class="slide-subtitle">مخصوص تیگو 7 و MVM</p>
+    </div>
+
+    <div class="slide" data-slide="5">
+      <div class="image-container">
+        <img src="https://8pic.ir/wp-content/uploads/upf-docs/WhatsApp-Image-2025-11-18-at-14.09.311.jpeg" alt="YLZCOMPANY.IR">
+      </div>
+      <h1 class="slide-title">YLZCOMPANY.IR</h1>
+      <p class="slide-subtitle">ویژه KMC J7</p>
+    </div>
+
+    <div class="slide" data-slide="6">
+      <div class="image-container">
+        <img src="https://8pic.ir/wp-content/uploads/upf-docs/WhatsApp-Image-2025-11-18-at-14.09.31.jpeg" alt="YLZCOMPANY.IR">
+      </div>
+      <h1 class="slide-title">YLZCOMPANY.IR</h1>
+      <p class="slide-subtitle">ویژه KMC K7</p>
+    </div>
+
+    <div class="slide" data-slide="7">
+      <div class="image-container">
+        <img src="https://8pic.ir/wp-content/uploads/upf-docs/WhatsApp-Image-2025-11-18-at-14.09.31.jpeg" alt="YLZCOMPANY.IR">
+      </div>
+      <h1 class="slide-title">YLZCOMPANY.IR</h1>
+      <p class="slide-subtitle">کاور حرفه‌ای برای T9</p>
+    </div>
+
+    <div class="slide" data-slide="8">
+      <div class="image-container">
+        <img src="https://8pic.ir/wp-content/uploads/upf-docs/WhatsApp-Image-2025-11-18-at-14.10.191.jpeg" alt="YLZCOMPANY.IR">
+      </div>
+      <h1 class="slide-title">کاور ریموت وارداتی </h1>
+      <p class="slide-subtitle">مناسب تیگو 8 و فونیکس</p>
+    </div>
+
     <!-- کنترل‌ها -->
     <div class="controls">
       <button class="control-btn" id="prevBtn">❮</button>
@@ -224,7 +288,7 @@
     let currentSlide = 0;
     const totalSlides = slides.length;
 
-    // ایجاد نقاط
+    // ایجاد دایره‌ها
     for (let i = 0; i < totalSlides; i++) {
       const dot = document.createElement('div');
       dot.className = 'dot';
